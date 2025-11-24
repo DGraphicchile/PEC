@@ -1,0 +1,10 @@
+Codigo;Nombre;Categoria;Descripcion
+INT-IPS-001;Beneficios Estatales IPS;IPS;Recibir la nómina de beneficiarios con derecho a beneficios estatales como la Pensión Garantizada Universal (PGU), Exención y Rebaja de la cotización de salud.
+INT-IPS-002;Consulta de Responsabilidad de Pago de Bonos;IPS;Consultar qué institución es la responsable de pagar beneficios como el Aguinaldo y el Bono de Invierno, basado en quién paga la pensión de mayor monto.
+INT-SIVEGAM-001;Reportería de Asignación Familiar;SIVEGAM;Informar mensualmente los pagos, reintegros y cambios de estado de la Asignación Familiar.
+INT-REGCIVIL-001;Verificación de Supervivencia y Estado Civil;Registro Civil;Validar periódicamente la supervivencia y el estado civil de los beneficiarios para gatillar ceses de prestaciones (ej. por fallecimiento o nuevo vínculo).
+INT-BCH-001;Nómina de Pagos;Banco de Chile;Transmitir la nómina de pagos mensual para su abono en las cuentas de los beneficiarios o para la emisión de vales vista.
+INT-PREVIRED-001;Pago de Cotizaciones Previsionales;PREVIRED;Declarar y pagar las cotizaciones previsionales (AFP, Salud) retenidas a los pensionados en un formato centralizado.
+INT-SAP-001;Contabilización;SAP;Informar los movimientos financieros generados por el pago de prestaciones para su correcta contabilización.
+INT-FONASA-001;Descuentos por Préstamos Médicos;FONASA;Recibir la nómina de descuentos por préstamos médicos para aplicarlos en las liquidaciones de los pensionados.
+INT-CCAF-001;Descuentos por Créditos Sociales;CCAF;Recibir información sobre créditos sociales y otros descuentos para aplicar a los pensionados afiliados.

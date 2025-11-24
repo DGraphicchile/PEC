@@ -1,0 +1,86 @@
+Epica;ID de HU;Nombre Corto;Descripcion;Release;Logica;Dependencias;Testing;PCC;O_Optimistic;M_Most_Likely;P_Pessimistic;Te_Expected_Duration;Variance;Notas
+1;HU 1.1;Configurar Proyecto;Configurar el proyecto AdonisJS 6.;R1;2;2;2;6;5;6;8;6,33;0,25;
+1;HU 1.2;Pipeline CI/CD;Implementar el pipeline de CI/CD (ADR-011).;R1;2;3;2;7;6;7;9;7,33;0,25;Depende de herramientas cloud.
+1;HU 1.3;Implementar Patrones Transversales;Implementar los patrones transversales (outbox, idempotencia, auditoría).;R1;3;3;4;10;7;10;15;10,50;1,78;Componentes transversales.
+1;HU 1.4;Plataforma de Escenarios;Configurar la plataforma de escenarios de verificación (ADR-012).;R1;3;2;3;8;6;8;11;8,17;0,69;
+1;HU 1.5;Scaffolding para Desarrollo;Como Desarrollador, quiero los comandos make:action, make:listener, make:rule y make:builder (ADR-018), para acelerar el desarrollo.;R1;3;1;3;7;5;7;11;7,50;1,00;Inversion en tooling para consistencia.
+1;HU 1.6;Configurar Inertia.js y React;Como Desarrollador, quiero configurar el proyecto AdonisJS con el adaptador de Inertia.js y la estructura base de React.;R1;2;2;2;6;5;6;8;6,33;0,25;Habilitador para el Portal de Analistas.
+1;HU 1.7;Prototipar Front-end;Como Diseñador UX/UI, quiero crear un prototipo navegable de alta fidelidad para las 3 pantallas principales (Bandeja, FichaPersona, FVM).;R1;2;3;3;8;6;8;11;8,17;0,69;Validacion temprana de UX/UI.
+1;HU 1.8;Implementar RuleExecutorService;Como Arquitecto, quiero implementar un RuleExecutorService genérico que pueda instanciar y ejecutar dinámicamente cualquier Regla de Negocio (RDN).;R1;3;4;2;9;7;9;13;9,50;1,00;Componente critico de arquitectura.
+1;HU 1.9;Definir DomainEvents y Telemetría;Como Arquitecto, quiero definir el catálogo de DomainEvents y la telemetría PDN→EDN/RDN.;R1;3;3;3;9;6;9;13;9,50;1,00;Outbox, idempotencia y correlacion PDN→EDN/RDN — R1.
+2;HU 2.1;Implementar Migraciones BBDD;Implementar las migraciones de base de datos del MDLO.;R1;2;2;2;6;5;6;8;6,33;0,25;
+2;HU 2.2;Implementar FrameworkResolverService;Implementar el FrameworkResolverService (ADR-003).;R1;4;2;4;10;7;10;15;10,50;1,78;Logica de resolucion de versiones.
+2;HU 2.3;Cargar Artefactos Normativos;Cargar artefactos normativos (Marcos y CCL).;R1;2;2;2;6;5;6;8;6,33;0,25;
+2;HU 2.4 (Spike);Analizar Modelo para Correcciones;Como Arquitecto, quiero analizar y validar el modelo de datos contra un escenario de corrección retroactiva (PDN-COR-001).;R1;3;4;2;9;7;9;13;9,50;1,00;Asegura que el modelo soporta R2.
+3;HU 3.1;Otorgamiento de Pensión Simple;Implementar el proceso de otorgamiento de pensión simple.;R1;4;3;4;11;8;11;16;11,5;1,78;Agrupa subtareas 3.1.1 a 3.1.5
+3;HU 3.2;Gestionar Asignación Familiar;Implementar gestión de Asignación Familiar.;R1;3;3;3;9;7;9;12;9,17;0,69;
+3;HU 3.3;Gestionar Cobrantes y Retenciones;Implementar gestión de cobrantes y retenciones judiciales.;R1;4;4;4;12;8;12;18;12,67;2,78;Logica de prioridades.
+3;HU 3.4;Inactivaciones y Reactivaciones Básicas;Implementar inactivaciones y reactivaciones básicas.;R1;3;3;3;9;7;9;12;9,17;0,69;
+3;HU 3.8;Cierre de Asignación Familiar;Implementar cierre de Asignación Familiar (foto/lock) y congelamiento de cambios post-cierre.;R1;3;2;3;8;6;8;11;8,17;0,69;Congelar cambios post-cierre — R1.
+3;HU 3.9;Nuevas Nupcias y Bono Matrimonio;Implementar nuevas nupcias (viudez) con cese y pago de bono por matrimonio (pago único) con sus evidencias.;R2;4;3;4;11;8;11;16;11,50;1,78;Cese viudez + pago unico y evidencias — R2.
+3;HU 3.10;Retroactivo Inicial y Finiquito;Implementar retroactivo inicial de otorgamiento con generación de finiquito (detalle de cálculo) y flujo de liberación a pago (vale vista).;R2;4;4;4;12;8;12;18;12,67;2,78;Detalle de calculo y liberacion a pago — R2.
+3;HU 3.11;Bypass Controlado por Excepción;Implementar bypass controlado por excepción (cuando falta insumo externo crítico) con registro de EXD/VERF.;R2;3;3;3;9;7;9;12;9,17;0,69;Gobernanza (EXD/VERF) y regularizacion posterior — R2.
+3;HU 3.12;Gestionar Beneficios Externos;Como Analista, quiero gestionar los Beneficios Previsionales Externos de una persona para registrar información clave de otras instituciones.;R2;3;3;3;;6;8;11;;;Gestion de datos maestros para incompatibilidades — R2.
+3;HU 3.13;Gestionar Ciclo de Vida de Deuda;Como Analista, quiero gestionar el ciclo de vida de una Deuda, incluyendo su creación, planes de pago y condonación.;R2;4;4;4;;8;12;18;;;PDN: PDN-COR-003. Gestion de Deudas, planes de pago y condonacion — R2.
+4;HU 4.1;Orquestador de Ciclo de Pago;Implementar orquestador del ciclo de pago masivo (ADR-010).;R1;4;4;4;12;8;12;18;12,67;2,78;Logica de ejecucion masiva.
+4;HU 4.2.1;Calcular Liquidación Individual;Como Sistema, quiero implementar el cálculo de una liquidación individual, aplicando haberes y descuentos para una única prestación.;R1;5;5;5;15;10;15;25;16,67;6,25;Logica mas compleja. Criterio de Aceptacion Multi-Marco.
+4;HU 4.2.2;Orquestador de Ejecución Masiva;Como Sistema, quiero implementar el orquestador de ejecución masiva que procese todas las prestaciones activas.;R1;4;3;4;11;8;11;16;11,50;1,78;Gestiona checkpoints y reintentos.
+4;HU 4.2.3;Optimizar Rendimiento del Lote;Como Desarrollador, quiero optimizar el rendimiento del lote de pago mensual para cumplir con la ventana operativa.;R1;3;3;4;10;7;10;15;10,50;1,78;Cumplir com NFRs de ventana operativa.
+4;HU 4.3;Cálculo de Prorrata por Concurrencia;Implementar cálculo de prorrata por concurrencia.;R1;4;3;4;11;8;11;16;11,50;1,78;
+4;HU 4.4;Cálculo de Reajuste por IPC;Implementar cálculos de reajuste por IPC.;R1;3;2;3;8;6;8;11;8,17;0,69;
+4;HU 4.5;Aplicación de Tope del Art. 50;Implementar aplicación de tope del Art. 50.;R1;4;3;4;11;8;11;16;11,50;1,78;RDN: CALC-PLI-013.
+4;HU 4.6;Pagos Especiales (Aguinaldos);Implementar pagos especiales (aguinaldos).;R2;3;3;3;9;7;9;13;9,33;1,00;PDN: PDN-PAG-005. R2.
+4;HU 4.7;Reliquidaciones Multi-Marco;Implementar reliquidaciones multi-marco.;R2;4;4;4;12;8;12;18;12,67;2,78;PDN: PDN-COR-001, PDN-COR-002. R2.
+4;HU 4.8;Motor de Automatizaciones 'Regulariza';Implementar motor de automatizaciones regulariza (inactivaciones/reactivaciones/etc.), con evidencias PDF/logs por subproceso.;R1;5;4;5;14;10;15;25;16,67;6,25;Automatizaciones mensuales y PDFs — R1.
+4;HU 4.9;Preliquidación como Artefacto Formal;Implementar preliquidación como artefacto formal (resumen PDF y datos), con flujo de revisión y trazabilidad.;R1;3;3;3;9;7;9;12;9,17;0,69;Resumen PDF/datos y trazabilidad — R1.
+4;HU 4.10;Re-ejecución Idempotente y Locks;Implementar re-ejecución idempotente de preliquidación/lote y bloqueos por cierre de periodo.;R1;4;4;4;12;8;12;18;12,67;2,78;Re-ejecucion segura y bloqueos por cierre — R1.
+4;HU 4.11;Calendario de Cierres y Adelantos;Parametrizar calendario de cierres operativos (AF y pagos) y reglas de adelanto en meses con aguinaldo.;R1;3;3;3;9;6;9;13;9,50;1,00;Cierre variable (aguinaldos) y validaciones — R1.
+5;HU 5.0;Definir Contratos de Integración;Definir contratos y esquemas de integración para todo el ecosistema.;R1;3;4;3;10;7;10;15;10,33;1,78;Layouts/encoding/PII/transporte/idempotencia/acuse — Gating R1.
+5;HU 5.1;Generar Archivo para Banco;Generar archivo de pago para Banco de Chile.;R1;3;3;3;9;7;9;12;9,17;0,69;
+5;HU 5.2;Generar Archivo para PREVIRED;Generar archivo de cotizaciones para PREVIRED.;R1;3;3;3;9;7;9;12;9,17;0,69;
+5;HU 5.3;Generar Archivo para SAP;Generar comprobante contable para SAP.;R1;3;3;3;9;7;9;12;9,17;0,69;
+5;HU 5.4;Generar Reporte GRIS;Generar reporte regulatorio GRIS para SUSESO.;R1;4;5;4;13;9;13;19;13,67;2,78;Multiples dependencias de datos.
+5;HU 5.5;Integración con Registro Civil;Implementar integración con Registro Civil.;R1;3;2;3;8;6;8;11;8,17;0,69;
+5;HU 5.6;Integración con SIVEGAM;Implementar integración automática con SIVEGAM.;R2;3;3;3;9;7;9;12;9,17;0,69;PDN: PDN-REP-003. R2.
+5;HU 5.7;Reportería Regulatoria Extendida;Implementar reportería regulatoria extendida.;R2;3;4;4;11;8;11;16;11,50;1,78;R2.
+5;HU 5.8;Ingesta de Datos IPS/PGU;Implementar ingesta de IPS/PGU (PGU, aguinaldos, bono invierno) a tablas temporales y aplicación en cálculo.;R1;3;3;3;9;7;9;12;9,17;0,69;Tablas temporales y aplicacion en calculo — R1.
+5;HU 5.9;Ingesta de Datos Fonasa/CCAF;Implementar ingesta de Fonasa (préstamos) y CCAF (créditos) para descuentos.;R1;3;3;3;9;7;9;12;9,17;0,69;Prestamos/creditos para liquidacion — R1.
+5;HU 5.10;Pagos al Extranjero;Implementar pago a terceros en el extranjero (Tesorería/Western Union) y su archivo de salida.;R2;3;3;3;9;7;9;12;9,17;0,69;Archivo de salida para terceros — R2.
+5;HU 5.11;Detalle de Cobro de Concurrencia;Implementar Detalle de Cobro de Concurrencia para conciliación trimestral con otras entidades.;R2;3;3;4;10;7;10;15;10,50;1,78;Conciliacion trimestral con otras entidades — R2.
+5;HU 5.12;Reportes para SUSESO-PIES;Implementar reportes de sugerencias SUSESO-PIES (actualizaciones manuales de cargas familiares) a partir de cambios detectados.;R2;2;2;2;6;5;6;8;6,33;0,25;Actualizaciones manuales de cargas — R2.
+5;HU 5.13;Reportes Adicionales a IPS;Implementar reportes adicionales a IPS (p. ej., capitales vigentes, listados art. 53), según especificación vigente.;R2;3;3;3;9;7;9;12;9,17;0,69;Capitales vigentes, art. 53 — R2.
+5;HU 5.14;Contingencias de Integraciones;Diseñar contingencias/rollback por integración (Banco, PREVIRED, SAP, GRIS): criterios de activación, procedimientos, y pruebas.;R1;3;3;3;9;6;9;12;9,00;1,00;Criterios, procedimientos y pruebas — R1.
+6;HU 6.1;BDD para Camino Feliz;Desarrollar BDD para Camino Feliz;R1;3;4;4;11;8;11;16;11,50;1,78;Cubre HU 3.1 y HU 4.2.1.
+6;HU 6.2;BDD para Acuerdos de Pago;Desarrollar BDD para Acuerdos;R1;2;3;3;8;6;8;12;8,33;1,00;Cubre HU 3.3.
+7;HU 7.1;Estrategia de Migración de Datos;Definir estrategia de migración de datos (alcance, mapeos, reglas de calidad, reconciliación).;R1;4;4;4;12;8;12;18;12,33;2,78;Gating R1.
+7;HU 7.2;Ensayo General de Migración;Ejecutar dress rehearsal (ensayo general) de migración con dataset representativo y métricas de éxito.;R1;4;4;5;13;8;13;20;13,33;4,00;Gating R1.
+7;HU 7.3;Plan de Cutover;Elaborar plan de cutover (ventana, pasos, roles, comunicación) coordinado con operación.;R1;3;3;3;9;6;9;12;9,00;1,00;Gating R1.
+7;HU 7.4;Plan de Backout;Definir plan de backout (reversa) con criterios, tiempos y validaciones de retorno seguro.;R1;3;3;3;9;6;9;12;9,00;1,00;Gating R1.
+7;HU 7.5;Validación Post-Cutover;Diseñar y ejecutar validación post-cutover (conciliación contable, liquidaciones, integraciones) con criterios de aceptación.;R1;4;4;4;12;8;12;18;12,33;2,78;Gating R1.
+8;HU 8.1;Telemetría y Tableros;Implementar telemetría centralizada (logs, métricas, trazas) y tableros de seguimiento.;R1;3;2;3;8;6;8;12;8,33;1,00;Incluye cobertura EDN/RDN — R1.
+8;HU 8.2;Alertas y Escalamiento;Configurar alertas (SLO breach, fallas de lote, integraciones, outbox/colas) con políticas de escalamiento.;R1;3;2;3;8;6;8;11;8,17;0,69;R1.
+8;HU 8.3;Runbooks Operativos;Documentar runbooks operativos (procedimientos estándar y de contingencia).;R1;2;2;2;6;4;6;8;6,00;0,44;R1.
+8;HU 8.4;Monitoreo de Idempotencia/Outbox;Monitorear idempotencia y outbox (reintentos, duplicados, atascos) con reportes periódicos.;R1;3;2;3;8;6;8;12;8,33;1,00;R1.
+9;HU 9.1;Política de PII y Clasificación;"Definir política de PII y clasificación de datos; aplicar principios de minimización y enmascaramiento.";R1;3;2;2;7;5;7;10;7,17;0,69;R1.
+9;HU 9.2;Cifrado en Tránsito y Reposo;Implementar cifrado en tránsito y en reposo para datos sensibles y artefactos.;R1;3;3;3;9;6;9;13;9,17;1,36;R1.
+9;HU 9.3;Control de Acceso por Rol;Aplicar controles de acceso por rol (least privilege) y auditoría de accesos.;R1;3;3;3;9;6;9;12;9,00;1,00;R1.
+9;HU 9.4;Custodia WORM de Evidencias;Establecer custodia WORM para evidencias y reportes requeridos por auditoría/regulador.;R1;2;2;2;6;4;6;9;6,17;0,69;R1.
+10;HU 10.1;Manuales y Guías de Operación;Elaborar manuales y guías de operación (incluye checklists de cierre y revisión).;R1;2;2;2;6;4;6;8;6,00;0,44;R1.
+10;HU 10.2;Capacitación y UAT Guiado;Ejecutar capacitaciones y UAT guiado con scripts de demo y criterios de aceptación.;R1;3;3;3;9;6;9;13;9,17;1,36;R1.
+10;HU 10.3;Plan de Comunicación y Soporte;Planificar comunicación de cambios y soporte (canales, horarios, flujo de incidencias).;R1;2;2;2;6;4;6;8;6,00;0,44;R1.
+11;HU 11.1;UI: Librería de Componentes;Como Desarrollador Frontend, quiero construir una librería de componentes reutilizables.;R1;3;2;4;9;8;12;16;12,00;1,78;Base para toda la UI — R1.
+11;HU 11.2;UI: Layout y Navegación;Como Analista, quiero una estructura de aplicación principal navegable (layout, menú, enrutamiento).;R1;2;2;3;7;5;7;10;7,17;0,69;Enrutamiento y estructura principal — R1.
+11;HU 11.3;UI: Dashboard y Búsqueda;Como Usuario, quiero una pantalla de Dashboard y Búsqueda Global funcionales.;R1;2;3;3;8;6;8;12;8,33;1,00;KPIs y busqueda global — R1.
+11;HU 11.4;UI: Bandeja de Tareas;Como Analista, quiero la Bandeja de Tareas implementada y conectada a los datos.;R1;4;4;4;12;9;12;17;12,50;1,78;Filtros, acciones y logica de negocio — R1.
+11;HU 11.5;UI: Vista FichaPersona;Como Analista, quiero la Vista FichaPersona implementada para consultar la información 360° de un beneficiario.;R1;4;5;4;13;10;13;18;13,50;1,78;Vista 360 con alta densidad de datos — R1.
+11;HU 11.6;UI: Vista Detalle de Expediente;Como Analista, quiero la Vista Detalle de Expediente implementada para analizar los casos del camino feliz de R1.;R1;3;4;4;11;8;11;15;11,17;1,36;Timeline y visor de documentos — R1.
+11;HU 11.7;UI: Vista Detalle de Incidente (FVM);Como Supervisor, quiero la Vista Detalle de Incidente (FVM) implementada para gestionar las excepciones de dominio.;R2;4;4;4;12;8;12;17;12,33;2,25;UI para gobernanza de excepciones — R2.
+11;HU 11.8;UI: Vista de Procesos Masivos;Como Operador de Pagos, quiero la Vista de Procesos Masivos implementada para poder ejecutar y monitorear los ciclos de pago.;R1;2;3;3;8;6;9;13;9,17;1,36;UI para iniciar y monitorear batches — R1.
+11;HU 11.9;UI: Algoritmo IPT en Bandeja;Como Analista, quiero que la Bandeja de Tareas implemente el algoritmo de Índice de Prioridad de Tarea (IPT).;R1;3;2;3;8;5;7;10;7,17;0,69;Algoritmo de priorizacion en Bandeja — R1.
+11;HU 11.10;UI: Pantallas de Administración;Como Analista, quiero las pantallas de administración para Beneficios Externos y Deudas.;R2;3;3;3;9;7;10;14;10,17;1,36;CRUDs para Deudas y Beneficios Externos — R2.
+12;HU 12.1;FIN: Generar y Enviar Cobros;Como Operador Financiero, quiero generar y enviar cobros de concurrencia a otros organismos.;R2;3;4;3;10;7;10;14;10,17;1,36;Proceso de negocio financiero — R2.
+12;HU 12.2;FIN: Recibir y Procesar Cobros;Como Operador Financiero, quiero una interfaz para recibir, validar y procesar solicitudes de concurrencia de otros organismos.;R2;3;4;3;10;7;10;14;10,17;1,36;Proceso de negocio financiero — R2.
+12;HU 12.3;FIN: Compensación Trimestral;Como Sistema, quiero ejecutar el proceso de compensación trimestral de deudas y créditos por concurrencia.;R2;4;3;4;11;8;12;17;12,17;2,25;Proceso batch de conciliacion — R2.
+13;HU 13.1;MON: Monitoreo Proximidad de Cese;Como Sistema, quiero monitorear la proximidad de cese de beneficios para notificar preventivamente a los beneficiarios.;R2;3;2;3;8;6;8;11;8,17;0,69;Monitor proactivo y comunicacion — R2.
+13;HU 13.2;MON: Notificaciones a Empleadores/AFP;Como Sistema, quiero generar y enviar notificaciones formales y automáticas a empleadores y AFPs.;R2;3;3;3;9;7;9;13;9,33;1,00;Generacion de documentos regulatorios — R2.
+13;HU 13.3;MON: Informes Regulatorios Específicos;Como Sistema, quiero generar informes regulatorios específicos y no masivos gatillados por eventos.;R2;3;3;3;9;7;9;13;9,33;1,00;Generacion de informes ad-hoc — R2.

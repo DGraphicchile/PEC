@@ -1,0 +1,35 @@
+Epica;Historia de Usuario;Logica;Dependencias;Testing;PCC;O_Optimistic;M_Most_Likely;P_Pessimistic;Te_Expected_Duration;Variance;Notas
+1;HU-001: Configurar CI/CD;2;3;2;7;6;7;9;7,33;0,25;Depende de herramientas cloud.
+1;HU-002: Esquema inicial BBDD;2;2;2;6;5;6;8;6,33;0,25;Basado en el modelo de entidades.
+1;HU-003: FrameworkResolverService;4;2;4;10;7;10;15;10,50;1,78;Logica de resolucion de versiones.
+1;HU-004: Patrones de Idempotencia y Evidencias;3;3;4;10;7;10;15;10,50;1,78;Componentes transversales.
+1;HU-005: Scaffolding para Actions;3;1;3;7;5;7;11;7,50;1,00;Inversion inicial en tooling.
+1;HU-006: Scaffolding para Listeners;3;1;3;7;5;7;11;7,50;1,00;Inversion inicial en tooling.
+1;HU-007: Scaffolding para Rules y Builders;3;1;3;7;5;7;11;7,50;1,00;Inversion inicial en tooling.
+1;HU-008: Configurar Inertia.js;2;2;2;6;5;6;8;6,33;0,25;Habilitador para el Portal de Analistas.
+2;HU-101: Otorgar prestacion;3;4;3;10;8;10;14;10,33;1,00;Se beneficia del scaffolding.
+2;HU-102: Cesar por fallecimiento;3;2;3;8;6;8;11;8,17;0,69;Se beneficia del scaffolding.
+2;HU-103: Cesar por nuevo vinculo;3;2;3;8;6;8;11;8,17;0,69;Se beneficia del scaffolding.
+2;HU-104 (Spike): Analizar modelo para Correciones;3;4;2;9;7;9;13;9,50;1,00;Asegura que el modelo soporta Fase 2.
+3;HU-201: Ingestar archivo IPS;3;2;3;8;6;8;11;8,17;0,69;Logica de mapeo y transformacion.
+3;HU-202: Ingestar archivo SIVEGAM;3;2;3;8;6;8;11;8,17;0,69;Logica de mapeo y transformacion.
+3;HU-203: Ingestar archivo FONASA;2;2;3;7;5;7;11;7,50;1,00;Logica de mapeo mas simple.
+3;HU-204: Ingestar archivos CCAF;3;2;3;8;6;8;11;8,17;0,69;Puede requerir un adaptador por CCAF.
+4;HU-401: Reactivar pension orfandad;3;3;3;9;7;9;12;9,17;0,69;Maquina de estados y reglas.
+4;HU-402: Gestionar retenciones judiciales;4;4;4;12;8;12;18;12,67;2,78;Logica de acuerdos y prioridades.
+4;HU-403: Aplicar revision por agravamiento;4;4;4;12;8;12;18;12,67;2,78;Requiere recalculos y comparaciones.
+5;HU-501.1: Calcular liquidacion individual;4;5;4;13;9;13;19;13,67;2,78;Logica compleja. Criterio de Aceptacion Multi-Marco.
+5;HU-501.2: Orquestador de ejecucion masiva;4;3;4;11;8;11;16;11,50;1,78;Gestiona checkpoints y reintentos.
+5;HU-501.3: Optimizar rendimiento del lote;3;3;4;10;7;10;15;10,50;1,78;Cumplir com NFRs de ventana operativa.
+5;HU-502: Generar archivo Banco de Chile;3;3;3;9;7;9;12;9,17;0,69;Formato de archivo especifico.
+5;HU-503: Generar archivo PREVIRED;3;3;3;9;7;9;12;9,17;0,69;Formato de archivo especifico.
+5;HU-504: Generar comprobante SAP;3;3;3;9;7;9;12;9,17;0,69;Formato de archivo especifico.
+6;HU-601: Calcular pension sobrevivencia;4;4;4;12;8;12;18;12,67;2,78;Logica de prorrata, simplificada por patrones.
+6;HU-602: Recalcular por cese de beneficiario;4;4;4;12;8;12;18;12,67;2,78;Logica de acrecimiento.
+7;HU-701: Generar informe GRIS;4;5;4;13;9;13;19;13,67;2,78;Multiples dependencias de datos.
+8;HU-801: Desarrollar artefactos BDD para Otorgamiento;2;3;3;8;6;8;12;8,33;1,00;Cubre HU-101.
+8;HU-802: Desarrollar artefactos BDD para Calculo;3;4;4;11;8;11;16;11,50;1,78;Cubre HU-501.1.
+9;HU-901: UI - Bandeja de Tareas;4;4;4;12;9;12;17;12,50;1,78;Complejidad en filtros y acciones.
+9;HU-902: UI - Formulario Acuerdos;3;3;3;9;7;9;12;9,17;0,69;Componentes reutilizables.
+9;HU-903: UI - Vista FichaPersona;4;5;4;13;10;13;18;13,50;1,78;Alta densidad de informacion.
+TOTALES;--;--;--;--;290;223;290;397;297,34;48,14;--

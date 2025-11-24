@@ -1,0 +1,52 @@
+Codigo;Categoria;Subcategoria;Nombre;Descripcion
+VALID-OTG-001;VALID;;Validar Cotizaciones de Independiente;Verifica que un trabajador independiente tenga sus cotizaciones al día para poder recibir una prestación.
+VALID-OTG-002;VALID;;Impedir Pensión Transitoria a Funcionario Público;Impide la constitución de una pensión transitoria por límite de subsidio para funcionarios públicos.
+VALID-SOBREV-001;VALID;;Validar Elegibilidad Madre de Hijos del Causante;Valida la elegibilidad de la madre de los hijos del causante para recibir una pensión de sobrevivencia.
+VALID-ACUERDO-001;VALID;;Validar Vigencia de Poder Notarial;Asegura que la vigencia de un poder notarial para cobro no exceda los 2 años.
+VALID-ACUERDO-002;VALID;;Validar Cobrador de Pago Directo AF;Valida que el cobrador de un pago directo de Asignación Familiar sea un causante vigente.
+VALID-ACUERDO-003;VALID;;Validar Límite de Retención Judicial;Impone el límite máximo de retención judicial sobre una pensión (ej. 50%).
+VALID-MANT-001;VALID;;Validar Plazo de Certificado de Estudios;Verifica que un certificado de estudios para una pensión de orfandad se presente dentro del plazo legal.
+VALID-MANT-002;VALID;;Impedir Reevaluación sobre Gran Invalidez;Impide que se aplique una reevaluación sobre una Gran Invalidez ya constituida.
+VALID-PAGO-001;VALID;;Determinar Responsabilidad de Pago de Aguinaldo;Determina si la mutualidad es responsable del pago del aguinaldo, comparando montos con otras pensiones.
+VALID-PAGO-002;VALID;;Calificar para Bono de Invierno;Determina si un pensionado califica para el Bono de Invierno según su edad y monto de pensión.
+CALC-OTG-001;CALC;CALC-OTG;Calcular Sueldo Base (Dependientes);Orquesta el cálculo del Sueldo Base Mensual para trabajadores dependientes.
+CALC-OTG-002;CALC;CALC-OTG;Calcular Base de Pensión de Sobrevivencia;Calcula el monto base para una o más pensiones de sobrevivencia a partir de la pensión del causante.
+CALC-PIM-001;CALC;CALC-PIM;Calcular Bonificación Ley 19.403;Calcula el monto de la Bonificación de Viudez según la Ley N°19.403.
+CALC-PIM-002;CALC;CALC-PIM;Calcular Bonificación Ley 19.539;Calcula el monto de la Bonificación según la Ley N°19.539.
+CALC-PIM-003;CALC;CALC-PIM;Calcular Bonificación Ley 19.953;Calcula el monto de la Bonificación según la Ley N°19.953.
+CALC-PIM-004;CALC;CALC-PIM;Calcular Suplemento por Gran Invalidez;Calcula el Suplemento por Gran Invalidez.
+CALC-PIM-005;CALC;CALC-PIM;Calcular Incremento por Hijo (AF);Calcula el Incremento por Hijo para Asignación Familiar.
+CALC-PLI-001;CALC;CALC-PLI;Calcular Descuento de Salud;Calcula el descuento legal de salud (7% o el plan de Isapre).
+CALC-PLI-002;CALC;CALC-PLI;Calcular Descuento de Previsión;Calcula el descuento legal de previsión según la tasa de la AFP correspondiente.
+CALC-PLI-003;CALC;CALC-PLI;Calcular Monto de Asignación Familiar;Calcula el monto a pagar por Asignación Familiar según los causantes vigentes.
+CALC-PLI-004;CALC;CALC-PLI;Asignar Monto de PGU;Asigna el monto de la Pensión Garantizada Universal (PGU) como un haber.
+CALC-PLI-005;CALC;CALC-PLI;Aplicar Exención de Salud;Aplica el beneficio de Exención de Salud, generando un haber que anula el descuento.
+CALC-PLI-006;CALC;CALC-PLI;Aplicar Rebaja de Salud;Aplica el beneficio de Rebaja de Salud, generando un haber que disminuye el descuento.
+CALC-PLI-007;CALC;CALC-PLI;Aplicar Retención Judicial;Aplica una Retención Judicial según la configuración del acuerdo de pago.
+CALC-PLI-008;CALC;CALC-PLI;Aplicar Descuentos CCAF;Aplica los descuentos por convenios con Cajas de Compensación (CCAF).
+CALC-PLI-009;CALC;CALC-PLI;Calcular Días a Pagar por Cese en Mes;Calcula los días exactos a pagar para una prestación que se inactiva en el mes en curso.
+CALC-PLI-010;CALC;CALC-PLI;Calcular Días Pagados en Exceso;Calcula los días pagados en exceso cuando una inactivación se informa de forma retroactiva.
+CALC-PLI-011;CALC;CALC-PLI;Aplicar Ajustes Manuales;Aplica los Ajustes Manuales Pendientes en la liquidación.
+CALC-PLI-012;CALC;CALC-PLI;Redondeo de Monto Final;Aplica el redondeo legal al monto final de la liquidación.
+CALC-PLI-013;CALC;CALC-PLI;Aplicar Tope Legal Artículo 50;Aplica los límites legales al monto imponible o a los haberes/descuentos correspondientes según el artículo 50 aplicable.
+CALC-MANT-001;CALC;CALC-MANT;Aplicar Reajuste por IPC;Aplica el reajuste por variación del IPC a todas las pensiones activas.
+CALC-MANT-002;CALC;CALC-MANT;Asegurar Piso en Reevaluación;Asegura que una reevaluación de pensión nunca resulte en un monto inferior al que ya se recibía.
+CALC-MANT-003;CALC;CALC-MANT;Recalcular Porcentajes de Sobrevivencia;Recalcula los porcentajes de una pensión de sobrevivencia cuando uno de los beneficiarios cesa.
+CALC-FIN-001;CALC;CALC-FIN;Calcular Prorrata de Concurrencia;Calcula la prorrata de concurrencia para distribuir la responsabilidad de pago entre organismos.
+CALC-REP-001;CALC;CALC-REP;Calcular Campo para Informe GRIS;Calcula el campo "PENSION CAPITAL" para el informe regulatorio GRIS R01.
+CALC-OTG-003;CALC;CALC-OTG;Determinar Monto Final de Pensión;Determina el monto final de pensión en otorgamiento, componiendo resultados de otras reglas y parámetros.
+CALC-OTG-004;CALC;CALC-OTG;Calcular Bono por Matrimonio;Calcula el Bono por Matrimonio (pago único) asociado a nuevas nupcias en viudez.
+MAP-REP-001;MAP;MAP-REP;Homologar Estado Civil para GRIS;Homologa el estado civil del sistema a los códigos definidos por SUSESO para el informe GRIS.
+CICLO-INAC-001;CICLO;CICLO-INAC;Inactivar Carga Familiar por Mayoría de Edad;Define la inactivación automática de una carga familiar al cumplir la mayoría de edad.
+CICLO-INAC-002;CICLO;CICLO-INAC;Inactivar Carga Familiar por Fallecimiento;Define la inactivación automática de una carga familiar por fallecimiento.
+CICLO-CESE-001;CICLO;CICLO-CESE;Cesar Pensión de Viudez por Nuevo Vínculo;Define el cese de una pensión de viudez cuando el beneficiario contrae un nuevo vínculo.
+CUMP-OTG-001;CUMP;CUMP-OTG;Verificar Plazo de Pago de Indemnización;Verifica el cumplimiento del plazo máximo para el pago de una Indemnización (90 días).
+CUMP-OTG-002;CUMP;CUMP-OTG;Verificar Plazo de Pago de Pensión de Invalidez;Verifica el cumplimiento del plazo máximo para el pago de una Pensión de Invalidez (30 días).
+CUMP-OTG-003;CUMP;CUMP-OTG;Verificar Plazo de Pago de Pensión de Sobrevivencia;Verifica el cumplimiento del plazo máximo para el pago de una Pensión de Sobrevivencia (30 días).
+CUMP-OTG-004;CUMP;CUMP-OTG;Verificar Plazo de Entrega de Antecedentes del Empleador;Verifica el cumplimiento del plazo máximo para que un empleador entregue antecedentes (3 días hábiles).
+CUMP-MANT-001;CUMP;CUMP-MANT;Verificar Prescripción de Cobro de Subsidio;Verifica el cumplimiento del plazo de prescripción del derecho a cobro de un Subsidio (6 meses).
+CUMP-ASIGFAM-001;CUMP;CUMP-ASIGFAM;Verificar Prescripción de Cobro de Asignación Familiar;Verifica el cumplimiento del plazo de prescripción del derecho a cobro de Asignación Familiar retroactiva (5 años).
+CUMP-PAG-001;CUMP;CUMP-PAG;Verificar Prescripción de Solicitud de Reembolso;Verifica que la solicitud de reembolso por parte de una entidad empleadora del sector público se realice dentro del plazo máximo de 6 meses.
+COMM-MANT-001;COMM;COMM-MANT;Notificar Proximidad de Cese por Edad;Define el envío de la notificación de proximidad de cese por edad (6 meses antes).
+COMM-OTG-005;COMM;COMM-OTG;Registrar Gestión por Documentación Faltante;Registra un intento de contacto si vence el plazo de entrega de antecedentes sin recepción de documentos.
+VERF-GOB-001;VERF;VERF-GOB;Aprobar Plan de Acción para Incidente de Dominio;Requiere que un Líder de Equipo de Gobernanza valide el diagnóstico y la solución propuesta para una Excepción de Dominio.
