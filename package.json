@@ -1,7 +1,7 @@
 {
-  "name": "anteproy2",
+  "name": "98_tools",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "batch-md-to-docx.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -9,8 +9,7 @@
   "author": "",
   "license": "ISC",
   "description": "",
-  "devDependencies": {
-    "@mermaid-js/mermaid-cli": "^11.9.0",
-    "mermaid-filter": "^1.4.7"
+  "dependencies": {
+    "xlsx": "^0.18.5"
   }
 }
