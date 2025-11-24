@@ -1,0 +1,17 @@
+{{{
+  exports({
+    to: to
+  })
+}}}
+import type { BaseRule } from '#app/Rules/BaseRule'
+
+/**
+ * @id {{ id }}
+ * @description {{ description }}
+ */
+export const {{ ruleName }}: BaseRule<any, boolean> = (payload) => {
+  // TODO: Implementar la lógica de validación.
+  console.log('Ejecutando regla de validación: {{ id }}', payload)
+
+  return true
+}

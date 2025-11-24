@@ -1,0 +1,17 @@
+{{{
+  exports({
+    to: to
+  })
+}}}
+import type { BaseRule, RuleResult } from '#app/Rules/BaseRule'
+
+/**
+ * @id {{ id }}
+ * @description {{ description }}
+ */
+export const {{ ruleName }}: BaseRule<any, RuleResult> = (payload) => {
+  // TODO: Implementar la lógica de la regla.
+  console.log('Ejecutando regla de ciclo de vida/mapeo: {{ id }}', payload)
+
+  return { success: true, data: {} }
+}

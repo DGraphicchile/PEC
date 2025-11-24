@@ -1,0 +1,18 @@
+{{{
+  exports({
+    to: to
+  })
+}}}
+import type { BaseRule } from '#app/Rules/BaseRule'
+import { Money } from '#app/Types/Money'
+
+/**
+ * @id {{ id }}
+ * @description {{ description }}
+ */
+export const {{ ruleName }}: BaseRule<any, Money> = (payload) => {
+  // TODO: Implementar la lógica de cálculo.
+  console.log('Ejecutando regla de cálculo: {{ id }}', payload)
+
+  return { amount: 0, currency: 'CLP' }
+}

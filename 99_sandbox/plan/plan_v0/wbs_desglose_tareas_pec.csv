@@ -1,0 +1,90 @@
+Phase;Task_ID;Subtask_ID;Task_Description;Assigned_Role;PCC_Estimate;L;D;T;Note;Effort_Days_Real;Effort_Weeks_Real
+Fase 0;F0-DBA-01;DBA-01;Definicion del esquema completo de la BBDD en Prisma;DBA/Data Eng.;15;5;5;5;Maxima complejidad por interrelaciones del Anexo B.;7,69;1,54
+Fase 0;F0-ARQ-01;ARQ-01;Diseno y validacion del patron de orquestacion (PdnFactory);Tech Lead/Arq.;15;5;5;5;Componente mas complejo y critico de la arquitectura.;7,69;1,54
+Fase 0;F0-ARQ-02;ARQ-02;Diseno del sistema de configuracion normativa (SnaService);Tech Lead/Arq.;10;4;2;4;Logica de seleccion de version y validacion.;5,13;1,03
+Fase 0;F0-DEVOPS-01;DEVOPS-01;Creacion de la infraestructura base como codigo (IaC);DevOps;12;4;4;4;Define BBDD, red, etc.;6,15;1,23
+Fase 0;F0-DEVOPS-02;DEVOPS-02;Contenerizacion del entorno de desarrollo (Dockerfile, docker-compose);DevOps;9;3;3;3;Permite entorno consistente.;4,62;0,92
+Fase 0;F0-DEVOPS-03;DEVOPS-03;Creacion del pipeline de Integracion Continua (CI);DevOps;8;2;3;3;Automatiza la validacion del codigo.;4,10;0,82
+Fase 0;F0-QA-01;QA-01;Creacion de herramientas de prueba (Factories y TestUtils);QA/SDET;11;4;4;3;Logica para generar datos consistentes.;5,64;1,13
+Fase 1;F1-PDN-01;PDN-OTG-001.service;Implementacion de PDN de Otorgamiento (Complejo);Backend Dev;15;5;5;5;Orquesta multiples RDNs complejas.;7,00;1,40
+Fase 1;F1-PDN-02;PDN-OTG-002.service;Implementacion de PDN de Otorgamiento (Medio);Backend Dev;12;4;4;4;Manipulacion de estado de entidades.;5,60;1,12
+Fase 1;F1-RDN-01;CALC-OTG-001.service;Implementacion de RDN de Calculo de Sueldo Base (Complejo);Backend Dev;12;5;3;4;Logica de calculo compleja.;5,60;1,12
+Fase 1;F1-RDN-02;VALID-OTG-001.service;Implementacion de RDN de Verificacion de Cotizaciones (Medio);Backend Dev;9;4;2;3;Logica de validacion con acceso a datos.;4,20;0,84
+Fase 1;F1-CTRL-01;CTRL-OTG-01.service;Exposicion de la API para otorgamiento;Backend Dev;6;2;2;2;Paquete Controller Simple.;2,80;0,56
+Fase 1;F1-QA-01;QA-E2E-01;Prueba E2E para el flujo de Otorgamiento de Indemnizacion;QA/SDET;14;4;5;5;Orquesta factories y verifica estado final.;7,18;1,44
+Fase 2;F2-PDN-01;PDN-PAG-001.service;Implementacion de PDN de Pago (Complejo);Backend Dev;15;5;5;5;Ciclo de Pago Mensual;7,00;1,40
+Fase 2;F2-PDN-02;PDN-PAG-002.service;Implementacion de PDN de Pago (Complejo);Backend Dev;15;5;5;5;Calculo de Pension Imponible Mensual;7,00;1,40
+Fase 2;F2-PDN-03;PDN-PAG-003.service;Implementacion de PDN de Pago (Medio);Backend Dev;12;4;4;4;Calculo de Pension Liquida Mensual;5,60;1,12
+Fase 2;F2-PDN-04;PDN-PAG-004.service;Implementacion de PDN de Pago (Medio);Backend Dev;12;4;4;4;Aplicacion Masiva de Reajuste por IPC;5,60;1,12
+Fase 2;F2-PDN-05;PDN-PAG-005.service;Implementacion de PDN de Pago (Medio);Backend Dev;12;4;4;4;Orquestacion de Pago de Aguinaldos y Bonos;5,60;1,12
+Fase 2;F2-PDN-06;PDN-PAG-006.service;Implementacion de PDN de Pago (Medio);Backend Dev;12;4;4;4;Gestionar Reembolso a Entidad Publica;5,60;1,12
+Fase 2;F2-PDN-07;PDN-PAG-007.service;Implementacion de PDN de Pago (Medio);Backend Dev;12;4;4;4;Aplicacion de Acuerdos en Liquidacion Mensual;5,60;1,12
+Fase 2;F2-PDN-08;PDN-PAG-008.service;Implementacion de PDN de Pago (Medio);Backend Dev;12;4;4;4;Generacion de Nomina de Pago a Banco de Chile;5,60;1,12
+Fase 2;F2-PDN-09;PDN-PAG-009.service;Implementacion de PDN de Pago (Simple);Backend Dev;8;3;3;2;Generacion de Archivo de Cotizaciones a PREVIRED;3,73;0,75
+Fase 2;F2-PDN-10;PDN-PAG-010.service;Implementacion de PDN de Pago (Simple);Backend Dev;8;3;3;2;Generar Comprobante de Contabilizacion SAP;3,73;0,75
+Fase 2;F2-RDN-01;CALC-PLI-001.service;Implementacion de RDN de Pago (Complejo);Backend Dev;12;5;3;4;Cotizacion Legal de Salud (7%);5,60;1,12
+Fase 2;F2-RDN-02;CALC-PLI-002.service;Implementacion de RDN de Pago (Complejo);Backend Dev;12;5;3;4;Cotizacion Adicional de Salud (ISAPRE);5,60;1,12
+Fase 2;F2-RDN-03;CALC-PLI-003.service;Implementacion de RDN de Pago (Complejo);Backend Dev;12;5;3;4;Cotizacion Previsional (AFP/IPS);5,60;1,12
+Fase 2;F2-RDN-04;CALC-PLI-004.service;Implementacion de RDN de Pago (Complejo);Backend Dev;12;5;3;4;Asignacion Familiar;5,60;1,12
+Fase 2;F2-RDN-05;CALC-PLI-005.service;Implementacion de RDN de Pago (Complejo);Backend Dev;12;5;3;4;Pension Garantizada Universal (PGU);5,60;1,12
+Fase 2;F2-RDN-06;CALC-PLI-006.service;Implementacion de RDN de Pago (Medio);Backend Dev;9;4;2;3;Exencion de Salud;4,20;0,84
+Fase 2;F2-RDN-07;CALC-PLI-007.service;Implementacion de RDN de Pago (Medio);Backend Dev;9;4;2;3;Rebaja de Salud;4,20;0,84
+Fase 2;F2-RDN-08;CALC-PLI-008.service;Implementacion de RDN de Pago (Medio);Backend Dev;9;4;2;3;Retencion Judicial;4,20;0,84
+Fase 2;F2-RDN-09;CALC-PLI-009.service;Implementacion de RDN de Pago (Medio);Backend Dev;9;4;2;3;Descuentos CCAF;4,20;0,84
+Fase 2;F2-RDN-10;CALC-PLI-010.service;Implementacion de RDN de Pago (Medio);Backend Dev;9;4;2;3;Calculo de Dias a Pagar;4,20;0,84
+Fase 2;F2-RDN-11;CALC-PIM-001.service;Implementacion de RDN de Pago (Simple);Backend Dev;6;2;2;2;Bonificacion Ley N 19.403;2,80;0,56
+Fase 2;F2-RDN-12;CALC-PIM-002.service;Implementacion de RDN de Pago (Simple);Backend Dev;6;2;2;2;Bonificacion Ley N 19.539;2,80;0,56
+Fase 2;F2-RDN-13;CALC-PIM-003.service;Implementacion de RDN de Pago (Simple);Backend Dev;6;2;2;2;Bonificacion Ley N 19.953;2,80;0,56
+Fase 2;F2-INT-01;INT-BANCO.service;Implementacion de Integracion con Banco (Medio);Backend Dev;10;3;3;4;Generacion de nomina de pago.;4,67;0,93
+Fase 2;F2-INT-02;INT-CCAF.service;Implementacion de Integracion con CCAF (Medio);Backend Dev;10;3;3;4;Adelantada. Consumo de archivos de descuentos.;4,67;0,93
+Fase 2;F2-INT-03;INT-FONASA.service;Implementacion de Integracion con FONASA (Medio);Backend Dev;10;3;3;4;Adelantada. Consumo de archivos de prestamos medicos.;4,67;0,93
+Fase 2;F2-QA-01;QA-E2E-02;Pruebas E2E para el ciclo de pago mensual;QA/SDET;15;5;5;5;Prueba de batch y generacion de archivos.;7,69;1,54
+Fase 3;F3-PDN-01;PDN-MANT-001.service;Implementacion de PDN de Mantenimiento (Complejo);Backend Dev;15;5;5;5;Cese de Pension por Edad de Vejez;7,00;1,40
+Fase 3;F3-PDN-02;PDN-MANT-002.service;Implementacion de PDN de Mantenimiento (Complejo);Backend Dev;15;5;5;5;Aplicar Revision de Incapacidad (Agravamiento);7,00;1,40
+Fase 3;F3-PDN-03;PDN-MANT-003.service;Implementacion de PDN de Mantenimiento (Medio);Backend Dev;12;4;4;4;Suspender Pension de Orfandad;5,60;1,12
+Fase 3;F3-PDN-04;PDN-MANT-004.service;Implementacion de PDN de Mantenimiento (Medio);Backend Dev;12;4;4;4;Reactivar Pension de Orfandad;5,60;1,12
+Fase 3;F3-PDN-05;PDN-MANT-005.service;Implementacion de PDN de Mantenimiento (Medio);Backend Dev;12;4;4;4;Aplicar Reevaluacion de Incapacidad;5,60;1,12
+Fase 3;F3-PDN-06;PDN-MANT-006.service;Implementacion de PDN de Mantenimiento (Medio);Backend Dev;12;4;4;4;Gestionar Suspension de Pension Concurrente;5,60;1,12
+Fase 3;F3-PDN-07;PDN-MANT-007.service;Implementacion de PDN de Mantenimiento (Medio);Backend Dev;12;4;4;4;Sincronizacion Masiva de Vigencia de Causantes;5,60;1,12
+Fase 3;F3-PDN-08;PDN-MANT-008.service;Implementacion de PDN de Mantenimiento (Medio);Backend Dev;12;4;4;4;Gestionar Exportacion de Pension;5,60;1,12
+Fase 3;F3-PDN-09;PDN-MANT-009.service;Implementacion de PDN de Mantenimiento (Medio);Backend Dev;12;4;4;4;Gestionar Acuerdo de Pago;5,60;1,12
+Fase 3;F3-PDN-10;PDN-MANT-010.service;Implementacion de PDN de Mantenimiento (Simple);Backend Dev;8;3;3;2;Cese de Pension por Nuevo Vinculo;3,73;0,75
+Fase 3;F3-PDN-11;PDN-MANT-011.service;Implementacion de PDN de Mantenimiento (Simple);Backend Dev;8;3;3;2;Notificacion de Cese de Funciones por Pension;3,73;0,75
+Fase 3;F3-PDN-12;PDN-MANT-012.service;Implementacion de PDN de Mantenimiento (Simple);Backend Dev;8;3;3;2;Regularizacion de Pensiones de Sobrevivencia;3,73;0,75
+Fase 3;F3-PDN-13;PDN-MANT-013.service;Implementacion de PDN de Mantenimiento (Simple);Backend Dev;8;3;3;2;Inactivar Cargas Familiares por Cese;3,73;0,75
+Fase 3;F3-PDN-14;PDN-MANT-014.service;Implementacion de PDN de Mantenimiento (Simple);Backend Dev;8;3;3;2;Gestionar Cambio de Entidad Previsional;3,73;0,75
+Fase 3;F3-PDN-15;PDN-MANT-015.service;Implementacion de PDN de Mantenimiento (Simple);Backend Dev;8;3;3;2;Gestionar Cambio de Sistema de Salud;3,73;0,75
+Fase 3;F3-PDN-16;PDN-MANT-016.service;Implementacion de PDN de Mantenimiento (Simple);Backend Dev;8;3;3;2;Gestionar Ajustes Manuales de Liquidacion;3,73;0,75
+Fase 3;F3-PDN-17;PDN-MANT-017.service;Implementacion de PDN de Mantenimiento (Simple);Backend Dev;8;3;3;2;Solicitar Intervencion Manual de Prestacion;3,73;0,75
+Fase 3;F3-RDN-01;CALC-MANT-001.service;Implementacion de RDN de Mantenimiento (Complejo);Backend Dev;12;5;3;4;Reajuste por IPC;5,60;1,12
+Fase 3;F3-RDN-02;CALC-MANT-002.service;Implementacion de RDN de Mantenimiento (Medio);Backend Dev;9;4;2;3;Piso Minimo en Reevaluacion;4,20;0,84
+Fase 3;F3-RDN-03;CALC-MANT-003.service;Implementacion de RDN de Mantenimiento (Medio);Backend Dev;9;4;2;3;Recalculo de Porcentajes de Sobrevivencia;4,20;0,84
+Fase 3;F3-RDN-04;CICLO-INAC-001.service;Implementacion de RDN de Mantenimiento (Medio);Backend Dev;9;4;2;3;Inactivacion automatica de carga;4,20;0,84
+Fase 3;F3-RDN-05;VALID-MANT-001.service;Implementacion de RDN de Mantenimiento (Simple);Backend Dev;6;2;2;2;Verificacion de Plazo de Acreditacion;2,80;0,56
+Fase 3;F3-RDN-06;VALID-MANT-002.service;Implementacion de RDN de Mantenimiento (Simple);Backend Dev;6;2;2;2;Incompatibilidad de Reevaluacion sobre Gran Invalidez;2,80;0,56
+Fase 3;F3-INT-01;INT-REGCIVIL.service;Implementacion de Integracion con Registro Civil (Medio);Backend Dev;10;3;3;4;Consumo de archivos.;4,67;0,93
+Fase 3;F3-INT-02;INT-SIVEGAM.service;Implementacion de Integracion con SIVEGAM (Complejo);Backend Dev;14;4;5;5;Logica de sincronizacion compleja.;6,53;1,31
+Fase 3;F3-QA-01;QA-E2E-03;Prueba E2E para Cese por Nuevo Vinculo;QA/SDET;15;5;5;5;Verifica cese y pago final.;7,69;1,54
+Fase 3;F3-QA-02;QA-E2E-04;Prueba E2E para Suspension/Reactivacion de Orfandad;QA/SDET;15;5;5;5;Verifica ciclo completo de acreditacion.;7,69;1,54
+Fase 4;F4-PDN-01;PDN-COR-001.service;Implementacion de PDN de Correccion (Complejo);Backend Dev;15;5;5;5;Reliquidacion de Beneficio por Error.;7,00;1,40
+Fase 4;F4-PDN-02;PDN-COR-002.service;Implementacion de PDN de Correccion (Complejo);Backend Dev;15;5;5;5;Procesar y Ejecutar Dictamen de Ente Regulador.;7,00;1,40
+Fase 4;F4-PDN-03;PDN-COR-003.service;Implementacion de PDN de Correccion (Complejo);Backend Dev;15;5;5;5;Gestionar Reversion de Beneficio con Deuda.;7,00;1,40
+Fase 4;F4-PDN-04;PDN-FIN-001.service;Implementacion de PDN Financiero (Complejo);Backend Dev;15;5;5;5;Solicitar Cobro de Concurrencia a Otros Organismos.;7,00;1,40
+Fase 4;F4-PDN-05;PDN-FIN-004.service;Implementacion de PDN Financiero (Complejo);Backend Dev;15;5;5;5;Compensacion Trimestral de Concurrencias de Pensiones.;7,00;1,40
+Fase 4;F4-PDN-06;PDN-COR-004.service;Implementacion de PDN de Correccion (Medio);Backend Dev;12;4;4;4;Correccion de Rechazos de Informe Financiero SIVEGAM.;5,60;1,12
+Fase 4;F4-PDN-07;PDN-FIN-002.service;Implementacion de PDN Financiero (Medio);Backend Dev;12;4;4;4;Procesar Solicitud de Concurrencia Recibida.;5,60;1,12
+Fase 4;F4-PDN-08;PDN-FIN-003.service;Implementacion de PDN Financiero (Simple);Backend Dev;8;3;3;2;Iniciar Cobranza por Deuda Previsional del Empleador.;3,73;0,75
+Fase 4;F4-PDN-09;PDN-GOB-001.service;Implementacion del PDN de Gobernanza (GOB-001);Backend Dev;15;5;5;5;Paquete PDN Complejo.;7,00;1,40
+Fase 4;F4-INT-01;INT-SAP.service;Implementacion de Integracion con SAP (Complejo);Backend Dev;14;4;5;5;Generacion de archivo contable.;6,53;1,31
+Fase 4;F4-QA-01;QA-E2E-04;Pruebas E2E para escenarios de concurrencia y gestion de incidentes;QA/SDET;15;5;5;5;Prueba de flujos de excepcion.;7,69;1,54
+Fase 5;F5-PDN-01;PDN-REP-001.service;Implementacion de PDN de Reporteria (Complejo);Backend Dev;15;5;5;5;Generar Informe Mensual de Otorgamientos a SUSESO.;7,00;1,40
+Fase 5;F5-PDN-02;PDN-REP-003.service;Implementacion de PDN de Reporteria (Complejo);Backend Dev;15;5;5;5;Generacion y Envio de Informe Financiero SIVEGAM.;7,00;1,40
+Fase 5;F5-PDN-03;PDN-REP-004.service;Implementacion de PDN de Reporteria (Complejo);Backend Dev;15;5;5;5;Generacion y Envio de Informe GRIS R01 - Pensiones Vigentes.;7,00;1,40
+Fase 5;F5-PDN-04;PDN-REP-002.service;Implementacion de PDN de Reporteria (Medio);Backend Dev;12;4;4;4;Generar Informes de Rebajas y Exenciones para IPS.;5,60;1,12
+Fase 5;F5-QA-01;QA-PERF-01;Pruebas de Carga y Rendimiento;QA/SDET;11;4;3;4;Scripting y analisis de resultados.;5,64;1,13
+Fase 5;F5-QA-02;QA-SEC-01;Pruebas de Seguridad;QA/SDET;9;3;4;2;Analisis de vulnerabilidades y revision de codigo.;4,62;0,92
+Fase 5;F5-DEVOPS-01;DEVOPS-04;Documentacion y Runbook de Despliegue;DevOps;9;3;4;2;;4,62;0,92
+Fase 6;F6-DEVOPS-SRE;DEVOPS-SRE-01;Configuracion de Monitoreo y Alertas;DevOps;11;4;4;3;;5,64;1,13
+Fase 6;F6-SUPPORT;SUPPORT-01;Soporte de Hiper-cuidado (Hypercare);Tech Lead/Arq.;12;4;4;4;;6,15;1,23
+Fase 6;F6-SUPPORT;SUPPORT-02;Sesiones de Traspaso de Conocimiento;Tech Lead/Arq.;6;3;2;1;;3,08;0,62
+Fase 6;F6-QA-REG;QA-REG-01;Refinamiento del Set de Pruebas de Regresion;QA/SDET;9;3;3;3;;4,62;0,92
